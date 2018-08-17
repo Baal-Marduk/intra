@@ -10,7 +10,10 @@ $uploadOk = 1;
 //type de fichier
 $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-
+if (!isset($_POST['categorie'])){
+    $uploadOk = 0;
+    $_SESSION['status'] = "Erreur, veuillez séléctionner une catégorie";
+}
 // Check si le fichier existe
 if (file_exists($target_file)) {
     $uploadOk = 0;
