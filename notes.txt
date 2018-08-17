@@ -1,0 +1,4 @@
+$path=$directory . $dirs[$i] . $files[$j];
+                        $time = date(filemtime(getcwd().$path));
+                        echo $time;
+                        echo $path;
